@@ -19,10 +19,16 @@ st.session_state["messages"] = [{"role": "assistant", "content": "Translate user
 for msg in st.session_state.messages:
     st.chat_message(msg["role"]).write(msg["content"])
 
-st.session_state["messages"] = [{"role": "assistant", "content": "Translate user's input into English\
+st.session_state["messages"] = [{"role": "assistant", "content": 
+                                 {
+                                 """
+                                 Translate user's input into English\
                                   in a twitter-like way and a common way!\
                                   Tag at the beginning of your outputs\
-                                  with '[twitter-like] ' or '[common] '."}]
+                                  with '[twitter-like] ' or '[common] '.\
+                                 between the 2 type of answers, insert a new line."
+                                  """
+                                  }]
 
 if prompt := st.chat_input():
     if not openai_api_key:
