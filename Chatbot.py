@@ -20,7 +20,6 @@ for msg in st.session_state.messages:
     st.chat_message(msg["role"]).write(msg["content"])
 
 st.session_state["messages"] = [{"role": "assistant", "content": 
-                                 {
                                  """
                                  Translate user's input into English\
                                   in a twitter-like way and a common way!\
