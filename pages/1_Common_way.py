@@ -11,10 +11,10 @@ with st.sidebar:
     "[View the source code](https://github.com/streamlit/llm-examples/blob/main/Chatbot.py)"
     "[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/streamlit/llm-examples?quickstart=1)"
 
-st.title("💬 Twitter-like!")
-st.caption("🚀 Turn your text into English in a Twitter-like way!")
+st.title("💬 Common Translation!")
+st.caption("🚀 Turn your text in a common way")
 if "messages" not in st.session_state:
-    st.session_state["messages"] = [{"role": "assistant", "content": "Translate user's input into English in a twitter-like way."}]
+    st.session_state["messages"] = [{"role": "assistant", "content": "Translate user's input into English in a common way."}]
 
 for msg in st.session_state.messages:
     st.chat_message(msg["role"]).write(msg["content"])
