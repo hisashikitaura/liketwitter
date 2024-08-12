@@ -14,10 +14,15 @@ with st.sidebar:
 st.title("💬 Twitter-like!")
 st.caption("🚀 Turn your text into English in a Twitter-like way!")
 
-st.session_state["messages"] = [{"role": "assistant", "content": "Translate user's input into English in a twitter-like way!"}]
+st.session_state["messages"] = [{"role": "assistant", "content": "Translate user's input into English!"}]
 
 for msg in st.session_state.messages:
     st.chat_message(msg["role"]).write(msg["content"])
+
+st.session_state["messages"] = [{"role": "assistant", "content": "Translate user's input into English\
+                                  in a twitter-like way and a common way!\
+                                  Tag at the beginning of your outputs\
+                                  with '[twitter-like] ' or '[common] '."}]
 
 if prompt := st.chat_input():
     if not openai_api_key:
