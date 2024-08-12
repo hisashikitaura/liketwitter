@@ -13,8 +13,8 @@ with st.sidebar:
 
 st.title("💬 Common Translation!")
 st.caption("🚀 Turn your text in a common way")
-if "messages" not in st.session_state:
-    st.session_state["messages"] = [{"role": "assistant", "content": "Translate user's input into English in a common way."}]
+
+st.session_state["messages"] = [{"role": "assistant", "content": "Translate user's input into English in a common way."}]
 
 for msg in st.session_state.messages:
     st.chat_message(msg["role"]).write(msg["content"])

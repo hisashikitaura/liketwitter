@@ -13,8 +13,8 @@ with st.sidebar:
 
 st.title("💬 Twitter-like!")
 st.caption("🚀 Turn your text into English in a Twitter-like way!")
-if "messages" not in st.session_state:
-    st.session_state["messages"] = [{"role": "assistant", "content": "Translate user's input into English in a twitter-like way."}]
+
+st.session_state["messages"] = [{"role": "assistant", "content": "Translate user's input into English in a twitter-like way!"}]
 
 for msg in st.session_state.messages:
     st.chat_message(msg["role"]).write(msg["content"])
